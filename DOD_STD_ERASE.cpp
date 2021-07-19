@@ -46,7 +46,7 @@ int main(void) {
 	memset(drive_strings, 0, 200);
 	DWORD GetDrives = GetLogicalDriveStringsW(my_drives, (LPWSTR) drive_strings);
 	int drive_count;
-	printf("WELCOME TO DOD STANDARD DTIVE ERASE. AUTHORED BY CHARLES T.W. TRUSCOTT WATTERS\n");
+	printf("WELCOME TO DOD STANDARD DRIVE ERASE. AUTHORED BY CHARLES T.W. TRUSCOTT WATTERS\n");
 	printf("thievingmagpie.software\n\n");
 	printf("#################### PLEASE SELECT A DRIVE ####################\n\n");
 	printf("   ");
@@ -222,9 +222,9 @@ int main(void) {
 	LARGE_INTEGER position_again;
 	while((ULONGLONG) (sector_count * 512) <= (ULONGLONG) selected_drive_size){
 		LARGE_INTEGER position_again;
-		position_again.QuadPart = sector_count * 512; /* may want to compile with VS2019 x64, won't compile in x64 with VS2010, which is more reliable */
+		position_again.QuadPart = sector_count * 512; 
 		get_file_pointer = SetFilePointerEx(AccessDisk, position_again, NULL, FILE_BEGIN);
-		/* Invoke WriteFile in if-else condition anyway? */
+		
 		BOOL write_to_disk = WriteFile(AccessDisk, zero_buffer, 512, NULL, NULL);
 		printf("Writing to sector %I64u \t %I64u bytes left\t %I64u bytes written", (ULONGLONG) (position_again.QuadPart), (ULONGLONG) (selected_drive_size) - (ULONGLONG) (position_again.QuadPart), (ULONGLONG) (sector_count * 512));
 		printf("\n");
