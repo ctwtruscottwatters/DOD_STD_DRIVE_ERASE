@@ -46,8 +46,8 @@ int main(void) {
 	memset(drive_strings, 0, 200);
 	DWORD GetDrives = GetLogicalDriveStringsW(my_drives, (LPWSTR) drive_strings);
 	int drive_count;
-	printf("WELCOME TO ZERODISK. COPYRIGHT CHARLES T.W. TRUSCOTT 2021\n");
-	printf("thievingmagpie.software\tzerodisk.app\n\n");
+	printf("WELCOME TO DOD STANDARD DTIVE ERASE. AUTHORED BY CHARLES T.W. TRUSCOTT WATTERS\n");
+	printf("thievingmagpie.software\n\n");
 	printf("#################### PLEASE SELECT A DRIVE ####################\n\n");
 	printf("   ");
 	for(drive_count = 0; drive_count <= 200; ++drive_count){
