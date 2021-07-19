@@ -260,7 +260,7 @@ int main(void) {
 		sector_count_pass_two += 1;
 	}
 	printf("#################### 100 %c DONE (PASS 2, ONES) ####################\n", 0x25);
-	printf("%I64u BYTES SUCCESSFULLY ERASED, PASS 2 COMPLETED\n", (ULONGLONG) (sector_count * 512));
+	printf("%I64u BYTES SUCCESSFULLY ERASED, PASS 2 COMPLETED\n", (ULONGLONG) (sector_count_pass_two * 512));
 
 
 	ULONGLONG sector_count_pass_three = 0;
@@ -287,7 +287,7 @@ int main(void) {
 		sector_count_pass_three += 1;
 	}
 	printf("#################### 100 %c DONE (PASS 3, PRNG'd NUMBERS) ####################\n", 0x25);
-	printf("%I64u BYTES SUCCESSFULLY ERASED, PASS 3 COMPLETED\n", (ULONGLONG) (sector_count * 512));
+	printf("%I64u BYTES SUCCESSFULLY ERASED, PASS 3 COMPLETED\n", (ULONGLONG) (sector_count_pass_three * 512));
 	printf("##############################################################################\n");
 	printf("##############################################################################\n");
 	printf("##############################################################################\n");
