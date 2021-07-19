@@ -274,7 +274,6 @@ int main(void) {
 			BYTE rand_byte = rand() % 255;
 			rand_buffer[rand_count] = rand_byte;
 		}
-		LARGE_INTEGER position_again_pass_three;
 		position_again_pass_three.QuadPart = sector_count_pass_three * 512;
 		get_file_pointer = SetFilePointerEx(AccessDisk, position_again_pass_three, NULL, FILE_BEGIN);
 		BOOL write_to_disk = WriteFile(AccessDisk, rand_buffer, 512, NULL, NULL);
